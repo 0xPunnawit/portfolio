@@ -1,7 +1,7 @@
 {
   "profile": {
     "name": "Punnawit Rodsai",
-    "role": "Junior Backend Engineer",
+    "role": "Junior Developer",
     "bio": "I'm a 23-year-old Computer Science graduate from Phetchaburi Rajabhat University, specializing in backend development with full-stack flexibility. I am deeply passionate about architecting stable, high-performance systems and managing databases using Spring Boot, Go, and Node.js. Always eager to learn and adapt to emerging technologies.",
     "resumeUrl": "/resume-Punnawit.pdf"
   },
@@ -34,8 +34,8 @@
       "company": "TTB Bank (TMBThanachart)",
       "role": "Backend Developer Intern",
       "startDate": "2025-12",
-      "endDate": "2026-07",
-      "durationText": "8 Months",
+      "endDate": "Present",
+      "durationText": "11 Months",
       "projects": [
         {
           "title": "Digital Document Wallet (VC WALLET)",
@@ -57,6 +57,35 @@
           ]
         },
         {
+          "title": "NDID BOT Settlement",
+          "category": "Enterprise Production",
+          "isPoc": false,
+          "techStack": [
+            "Node.js",
+            "OracleDB",
+            "Automated Batch Service",
+            "Multi-Database Architecture",
+            "SMTP Email Alerts"
+          ],
+          "details": [
+            "Developed an automated Settlement Bot to download monthly CSV and XLSX report files from the NDID Portal for transaction reconciliation.",
+            "Configured multi-database connections between NDID and VC Wallet DB, keeping execution isolated to ensure zero impact on the production database.",
+            "Implemented database transactions for bulk data insertion, ensuring an all-or-nothing rollback if any single record fails to prevent invalid data.",
+            "Integrated automated SMTP email notifications to send execution logs, status summaries, and failure alerts to system administrators after each batch run."
+          ]
+        },
+        {
+          "title": "Settlement Audit Dashboard (Internal BU Tool)",
+          "category": "Enterprise Production",
+          "isPoc": false,
+          "techStack": ["Angular", "TypeScript", "RxJS", "REST APIs"],
+          "details": [
+            "Developed an internal web dashboard in Angular for Business Unit (BU) staff to audit and verify billing reconciliation reports.",
+            "Implemented step-by-step dynamic form validation to enforce date range constraints and sequential selection flows.",
+            "Integrated backend REST APIs to trigger and handle direct browser downloads of generated .xlsx report files."
+          ]
+        },
+        {
           "title": "LINE OA AI Receipt OCR & Voice Rewards",
           "category": "Internal POC",
           "isPoc": true,
@@ -64,7 +93,7 @@
             "NestJS",
             "Fastify",
             "TypeScript",
-            "Azure AI (OCR/STT)",
+            "Azure AI (OCR + LLM, STT)",
             "LINE OA"
           ],
           "details": [
@@ -74,6 +103,28 @@
             "Built a Rate Limiting mechanism to throttle incoming webhook requests, protecting the server from abuse and providing automated cool-down responses to users."
           ],
           "youtube": "https://youtube.com/shorts/IPyC1cH0gik?feature=share"
+        },
+        {
+          "title": "Trade Finance Service (Doc Check)",
+          "category": "Internal POC",
+          "isPoc": true,
+          "techStack": [
+            "NestJS",
+            "PostgreSQL",
+            "TypeORM",
+            "PDF Merging Engine",
+            "OCR + LLM Integration",
+            "XLSX",
+            "JavaScript",
+            "HTML5/CSS3"
+          ],
+          "details": [
+            "Engineered a centralized document repository in NestJS and TypeORM with smart PDF file versioning, replacing duplicate LC master files or appending related documents into a merged PDF.",
+            "Built secure file streaming services to render multi-page PDF previews directly on the web interface.",
+            "Integrated OCR and LLM pipelines to extract trade finance data and automatically identify document discrepancy fields.",
+            "Developed an interactive report UI featuring synchronized visual highlighting between table data and PDF locations, including color-coded error indicators and field-level discrepancy selectors.",
+            "Implemented automated Excel (.xlsx) report generation enabling users to export structured audit results directly from the discrepancy table."
+          ]
         }
       ]
     }
@@ -89,7 +140,7 @@
     },
     {
       "name": "Food Ordering Web",
-      "description": "Implemented a dual-role platform (Customer/Vendor) for ordering food online. Integrated SlipOK API to verify payment slips and update transaction status, and built vendor dashboards to manage menus and sales analytics (daily/weekly/monthly).",
+      "description": "พัฒนาแพลตฟอร์มที่รองรับบทบาทผู้ใช้งานสองรูปแบบ (ลูกค้า/ร้านค้า) สำหรับการสั่งอาหารออนไลน์ โดยมีการเชื่อมต่อกับ SlipOK API เพื่อตรวจสอบสลิปการชำระเงินและอัปเดตสถานะรายการธุรกรรม พร้อมทั้งสร้างแดชบอร์ดสำหรับร้านค้าเพื่อใช้จัดการเมนูอาหารและดูข้อมูลวิเคราะห์ยอดขาย (แบบรายวัน/รายสัปดาห์/รายเดือน)",
       "techStack": ["Node.js", "Express.js", "MySQL", "SlipOK API"],
       "github": "https://github.com/0xPunnawit/Food-Ordering-Web",
       "youtube": "https://youtu.be/Eph6FMQRJf0",
@@ -97,7 +148,7 @@
     },
     {
       "name": "Software Rental Web",
-      "description": "ระบบเช่าโปรแกรมด้วย Java Spring Boot เชื่อม MySQL เติมเงินด้วยการเช็คสลีปผ่าน SlipOK API",
+      "description": "ระบบเช่าโปรแกรมด้วย Java Spring Boot เชื่อม MySQL เติมเงินด้วยการเช็คสลีปผ่าน SlipOK API และ โปรแกรมเช็ควันหมดอายุวันเวลาที่เช่าจาก DB",
       "techStack": ["Java", "Spring Boot", "MySQL", "SlipOK API"],
       "github": "https://github.com/0xPunnawit/Software-Rental-Web",
       "youtube": "https://youtu.be/dg-BVdi7ueo",
