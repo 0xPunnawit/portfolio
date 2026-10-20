@@ -1,0 +1,113 @@
+{
+  "profile": {
+    "name": "Punnawit Rodsai",
+    "role": "Junior Backend Engineer",
+    "bio": "I'm a 23-year-old Computer Science graduate from Phetchaburi Rajabhat University, specializing in backend development with full-stack flexibility. I am deeply passionate about architecting stable, high-performance systems and managing databases using Spring Boot, Go, and Node.js. Always eager to learn and adapt to emerging technologies.",
+    "resumeUrl": "/resume-Punnawit.pdf"
+  },
+  "skills": {
+    "languages": ["Java", "JavaScript", "TypeScript", "Go"],
+    "frameworks_libraries": [
+      "Express.js",
+      "NestJS",
+      "Fastify",
+      "Spring Boot",
+      "Fiber",
+      "Next.js"
+    ],
+    "databases": ["MySQL", "PostgreSQL", "OracleDB"],
+    "tools": [
+      "Git",
+      "Docker",
+      "Podman",
+      "DBeaver",
+      "Postman",
+      "RedHat OpenShift",
+      "JMeter",
+      "Xampp",
+      "Ngrok",
+      "Elasticsearch"
+    ]
+  },
+  "experiences": [
+    {
+      "company": "TTB Bank (TMBThanachart)",
+      "role": "Backend Developer Intern",
+      "startDate": "2025-12",
+      "endDate": "2026-07",
+      "durationText": "8 Months",
+      "projects": [
+        {
+          "title": "Digital Document Wallet (VC WALLET)",
+          "category": "Enterprise Production",
+          "isPoc": false,
+          "techStack": [
+            "Node.js",
+            "Express.js",
+            "OracleDB",
+            "NDID Platform",
+            "JMeter",
+            "ELK Stack"
+          ],
+          "details": [
+            "Developed secure RESTful APIs using Node.js and Express to interact with Oracle DB for storing and managing digital documents.",
+            "Implemented asynchronous API integrations with the NDID platform, handling callbacks and wait states for identity verification.",
+            "Applied enterprise-level security protocols, including data encryption/decryption, hashing, and digital signatures, to ensure document authenticity.",
+            "Formatted and optimized application logs for the ELK Stack by trimming long data fields to ensure clear error tracking, while conducting API performance and load testing using JMeter."
+          ]
+        },
+        {
+          "title": "LINE OA AI Receipt OCR & Voice Rewards",
+          "category": "Internal POC",
+          "isPoc": true,
+          "techStack": [
+            "NestJS",
+            "Fastify",
+            "TypeScript",
+            "Azure AI (OCR/STT)",
+            "LINE OA"
+          ],
+          "details": [
+            "Developed a scalable backend system using NestJS and Fastify to handle Webhooks from LINE Official Account (LINE OA) for automated user engagement.",
+            "Implemented secure webhook validation by verifying LINE signatures and headers to prevent unauthorized requests.",
+            "Designed an integration workflow with an internal OCR service to process image uploads, extract financial data, and automatically calculate and reward loyalty points.",
+            "Built a Rate Limiting mechanism to throttle incoming webhook requests, protecting the server from abuse and providing automated cool-down responses to users."
+          ],
+          "youtube": "https://youtube.com/shorts/IPyC1cH0gik?feature=share"
+        }
+      ]
+    }
+  ],
+  "personalProjects": [
+    {
+      "name": "Backend Lottery System",
+      "description": "ระบบ Backend สำหรับซื้อ-ขายลอตเตอรี่ด้วย Spring Boot และ PostgreSQL พร้อมรองรับ Docker Compose และการ Deploy บน AWS EC2",
+      "techStack": ["Java", "Spring Boot", "PostgreSQL", "Docker", "AWS EC2"],
+      "github": "https://github.com/0xPunnawit/Lottery_System",
+      "youtube": "https://youtu.be/zhnP4oVKoNw",
+      "year": "2025"
+    },
+    {
+      "name": "Food Ordering Web",
+      "description": "Implemented a dual-role platform (Customer/Vendor) for ordering food online. Integrated SlipOK API to verify payment slips and update transaction status, and built vendor dashboards to manage menus and sales analytics (daily/weekly/monthly).",
+      "techStack": ["Node.js", "Express.js", "MySQL", "SlipOK API"],
+      "github": "https://github.com/0xPunnawit/Food-Ordering-Web",
+      "youtube": "https://youtu.be/Eph6FMQRJf0",
+      "year": "2024"
+    },
+    {
+      "name": "Software Rental Web",
+      "description": "ระบบเช่าโปรแกรมด้วย Java Spring Boot เชื่อม MySQL เติมเงินด้วยการเช็คสลีปผ่าน SlipOK API",
+      "techStack": ["Java", "Spring Boot", "MySQL", "SlipOK API"],
+      "github": "https://github.com/0xPunnawit/Software-Rental-Web",
+      "youtube": "https://youtu.be/dg-BVdi7ueo",
+      "year": "2024"
+    }
+  ],
+  "contacts": {
+    "email": "punnawit.rod@gmail.com",
+    "github": "https://github.com/0xPunnawit",
+    "linkedin": "https://www.linkedin.com/in/0xpunnawit/",
+    "facebook": "https://www.facebook.com/0xPunnawit/"
+  }
+}
