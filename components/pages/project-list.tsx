@@ -23,12 +23,12 @@ export function ProjectList() {
 
             <div className="mt-6 flex flex-wrap items-center gap-3">
               {project.github ? (
-                <LinkButton href={project.github} icon={GitHubMark}>
+                <LinkButton href={project.github} icon={GitHubMark} accent="code">
                   Source code
                 </LinkButton>
               ) : null}
               {project.youtube ? (
-                <LinkButton href={project.youtube} icon={YouTubeMark}>
+                <LinkButton href={project.youtube} icon={YouTubeMark} accent="video">
                   Video demo on YouTube
                 </LinkButton>
               ) : null}

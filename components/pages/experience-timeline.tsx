@@ -1,6 +1,7 @@
 import { BulletList, LinkButton, TechPills } from "@/components/link-button";
 import { YouTubeMark } from "@/components/icons";
 import { experiences, formatRange } from "@/lib/portfolio";
+import { cn } from "@/lib/utils";
 
 /**
  * One block per role, with a dot on the timeline and the projects shipped
@@ -41,7 +42,14 @@ export function ExperienceTimeline() {
                   <h3 className="font-serif text-[1.375rem] leading-snug tracking-[-0.01em] text-balance">
                     {project.title}
                   </h3>
-                  <span className="kicker shrink-0 rounded-full border border-border px-3 py-1.5 text-muted-foreground">
+                  <span
+                    className={cn(
+                      "kicker shrink-0 rounded-full border px-3 py-1.5",
+                      project.isPoc
+                        ? "border-accent-poc/40 bg-accent-poc/10 text-accent-poc"
+                        : "border-accent-prod/40 bg-accent-prod/10 text-accent-prod",
+                    )}
+                  >
                     {project.category}
                   </span>
                 </div>
@@ -51,7 +59,7 @@ export function ExperienceTimeline() {
 
                 {project.youtube ? (
                   <div className="mt-6">
-                    <LinkButton href={project.youtube} icon={YouTubeMark}>
+                    <LinkButton href={project.youtube} icon={YouTubeMark} accent="video">
                       Video demo on YouTube
                     </LinkButton>
                   </div>

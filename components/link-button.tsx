@@ -4,16 +4,24 @@ import type { IconComponent } from "@/components/nav-icon";
 import { cn } from "@/lib/utils";
 
 /**
- * Bordered action link. YouTube demos use the same shape with the play mark,
- * so "this opens a video" is readable at a glance.
+ * Where a link goes decides its colour: code links are indigo, video links
+ * are red. Colour plus the arrow is what makes "this is clickable" obvious.
  */
+const ACCENTS = {
+  code: "border-accent-code/35 bg-accent-code/10 text-accent-code hover:border-accent-code/60 hover:bg-accent-code/20",
+  video:
+    "border-accent-video/35 bg-accent-video/10 text-accent-video hover:border-accent-video/60 hover:bg-accent-video/20",
+} as const;
+
 export function LinkButton({
   href,
   icon: Icon,
+  accent,
   children,
 }: {
   href: string;
   icon: IconComponent;
+  accent: keyof typeof ACCENTS;
   children: ReactNode;
 }) {
   return (
@@ -21,14 +29,14 @@ export function LinkButton({
       href={href}
       target="_blank"
       rel="noreferrer noopener"
-      className="kicker inline-flex items-center gap-2.5 rounded-full border border-border bg-card px-4 py-2.5 text-foreground transition-colors duration-150 hover:border-foreground/40 hover:bg-muted/60"
+      className={cn(
+        "kicker inline-flex items-center gap-2.5 rounded-full border px-4 py-2.5 transition-all duration-150 hover:-translate-y-px active:translate-y-0",
+        ACCENTS[accent],
+      )}
     >
       <Icon aria-hidden="true" className="size-4 shrink-0" />
       <span>{children}</span>
-      <ArrowUpRight
-        aria-hidden="true"
-        className="size-3.5 shrink-0 text-muted-foreground"
-      />
+      <ArrowUpRight aria-hidden="true" className="size-3.5 shrink-0 opacity-70" />
     </a>
   );
 }
